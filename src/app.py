@@ -66,15 +66,15 @@ class MainWindow(QMainWindow):
         # If we want the property to apply only to one specific Widget , we can give it a name
         # using setObjectName() and use an ID Selector to refer to it.
         widget_stylesheet = "QWidget#central_widget {" \
-                            "border-color: rgba(255, 0, 0, 255);" \
-                            "border-left-color: rgba(255, 0, 0, 255);" \
-                            "border-right-color: rgba(255, 0, 0, 255);" \
-                            "border-bottom-color: rgba(255, 0, 0, 255);" \
-                            "border-style: dashed;" \
-                            "border-top-width: 4px;" \
-                            "border-left-width: 4px;" \
-                            "border-right-width: 4px;" \
-                            "border-bottom-width: 4px;" \
+                            "border-color: rgba(255, 255, 255, 255);" \
+                            "border-left-color: rgba(255, 255, 255, 255);" \
+                            "border-right-color: rgba(255, 255, 255, 255);" \
+                            "border-bottom-color: rgba(255, 255, 255, 255);" \
+                            "border-style: dotted;" \
+                            "border-top-width: 2px;" \
+                            "border-left-width: 2px;" \
+                            "border-right-width: 2px;" \
+                            "border-bottom-width: 2px;" \
                             "border-radius: 4px;" \
                             "background-color: rgba(255, 255, 255, 2);" \
                             "}"
@@ -521,14 +521,12 @@ class ButtonWindow(QWidget):
                             "}"
 
         button_stylesheet = "QPushButton {" \
-                            "color: rgb(255, 255, 255);" \
-                            "font: 75 10pt FreeSans;" \
-                            "background-color: rgba(6, 104, 249, 255);" \
-                            "border-top-color: rgba(151, 222, 247, 255);" \
-                            "border-left-color: rgba(151, 222, 247, 255);" \
-                            "border-right-color: rgba(4, 57, 135, 255);" \
-                            "border-bottom-color: rgba(4, 57, 135,255);" \
-                            "border-style: inset;" \
+                            "color: black;" \
+                            "font-size: 14px;" \
+                            "font: Arial;" \
+                            "font-weight: 400;" \
+                            "background-color: rgba(246, 248, 250, 255);" \
+                            "border: 2px solid rgba(215, 217, 220, 255);" \
                             "border-top-width: 2px;" \
                             "border-left-width: 2px;" \
                             "border-right-width: 3px;" \
@@ -538,24 +536,24 @@ class ButtonWindow(QWidget):
 
         # Create a button to capture the screen and save it to file.
         self.button_save = QPushButton("Save to File")
-        self.button_save.setFixedSize(85, 30)
+        self.button_save.setFixedSize(95, 32)
         self.button_save.setMouseTracking(True)
         self.button_save.installEventFilter(self)
-        # self.button_capture_image.setStyleSheet(button_stylesheet)
+        self.button_save.setStyleSheet(button_stylesheet)
 
         # Create a button to capture the screen and copy to clipboard.
         self.button_clipboard = QPushButton("Copy to Clipboard")
-        self.button_clipboard.setFixedSize(100, 30)
+        self.button_clipboard.setFixedSize(130, 32)
         self.button_clipboard.setMouseTracking(True)
         self.button_clipboard.installEventFilter(self)
-        # self.button_clipboard.setStyleSheet(button_stylesheet)
+        self.button_clipboard.setStyleSheet(button_stylesheet)
 
         # Create a button to close the application.
         self.button_close = QPushButton("Close")
-        self.button_close.setFixedSize(85, 30)
+        self.button_close.setFixedSize(95, 32)
         self.button_close.setMouseTracking(True)
         self.button_close.installEventFilter(self)
-        # self.button_close.setStyleSheet(button_stylesheet)
+        self.button_close.setStyleSheet(button_stylesheet)
 
         # Create a horizontal layout with the buttons.
         horizontal_layout = QHBoxLayout()
