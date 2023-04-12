@@ -1,5 +1,6 @@
 import sys
 from src.app import QApplication, MainWindow
+from src.ocr import ocrs
 
 def main():
     # Create a QApplication object. It manages the GUI application's control flow and main settings.
@@ -16,3 +17,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    # ocrs()

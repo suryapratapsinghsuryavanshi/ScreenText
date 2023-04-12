@@ -15,8 +15,6 @@ import win32con
 import io
 import win32clipboard
 from PIL import Image
-import cv2
-import pytesseract
 
 
 class MainWindow(QMainWindow):
