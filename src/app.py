@@ -16,6 +16,9 @@ import io
 import win32clipboard
 from PIL import Image
 
+# OCR Module
+from src.ocr import ocrs
+
 
 class MainWindow(QMainWindow):
     def __init__(self) -> None:
@@ -66,15 +69,15 @@ class MainWindow(QMainWindow):
         # If we want the property to apply only to one specific Widget , we can give it a name
         # using setObjectName() and use an ID Selector to refer to it.
         widget_stylesheet = "QWidget#central_widget {" \
-                            "border-color: rgba(255, 255, 255, 255);" \
-                            "border-left-color: rgba(255, 255, 255, 255);" \
-                            "border-right-color: rgba(255, 255, 255, 255);" \
-                            "border-bottom-color: rgba(255, 255, 255, 255);" \
+                            "border-color: rgba(255, 0, 0, 255);" \
+                            "border-left-color: rgba(255, 0, 0, 255);" \
+                            "border-right-color: rgba(255, 0, 0, 255);" \
+                            "border-bottom-color: rgba(255, 0, 0, 255);" \
                             "border-style: dotted;" \
-                            "border-top-width: 2px;" \
-                            "border-left-width: 2px;" \
-                            "border-right-width: 2px;" \
-                            "border-bottom-width: 2px;" \
+                            "border-top-width: 4px;" \
+                            "border-left-width: 4px;" \
+                            "border-right-width: 4px;" \
+                            "border-bottom-width: 4px;" \
                             "border-radius: 4px;" \
                             "background-color: rgba(255, 255, 255, 2);" \
                             "}"
@@ -131,7 +134,8 @@ class MainWindow(QMainWindow):
         self.region_height = self.height()
         # Open the Save File Dialog for the user to choose the location and the name
         # for the image to save.
-        self.screen_shoot_path = self.open_save_file_dialog()
+        # self.screen_shoot_path = self.open_save_file_dialog()
+        self.screen_shoot_path = os.path.expanduser("$HOME")
         # Hide both windows.
         self.hide()
         self.button_window.hide()
@@ -180,10 +184,14 @@ class MainWindow(QMainWindow):
         mem_dc.BitBlt((0, 0), (width, height), img_dc, (x, y), win32con.SRCCOPY)
         # Save the bitmap to a file.
         screenshot.SaveBitmapFile(mem_dc, full_path_and_image)
+        # Give the path of capture image to ocr
+        ocrs(full_path_and_image)
         # Free created objects.
         img_dc.DeleteDC()
         mem_dc.DeleteDC()
         win32gui.DeleteObject(screenshot.GetHandle())
+        # delete the image file
+        os.remove(full_path_and_image)
 
     @staticmethod
     def copy_image_from_file_to_clipboard(full_path_and_image: str) -> None:
@@ -535,7 +543,7 @@ class ButtonWindow(QWidget):
                             "}"
 
         # Create a button to capture the screen and save it to file.
-        self.button_save = QPushButton("Save to File")
+        self.button_save = QPushButton("Copy Text")
         self.button_save.setFixedSize(95, 32)
         self.button_save.setMouseTracking(True)
         self.button_save.installEventFilter(self)
