@@ -17,6 +17,11 @@ pip install -r ./requirements.txt
 ```
 6. Start Development.
 
+7. Run Project
+```sh
+python ./main.py
+```
+
 ## List of task to do
 | Task | Status |
 | -- | -- |

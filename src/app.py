@@ -550,7 +550,7 @@ class ButtonWindow(QWidget):
         self.button_save.setStyleSheet(button_stylesheet)
 
         # Create a button to capture the screen and copy to clipboard.
-        self.button_clipboard = QPushButton("Copy to Clipboard")
+        self.button_clipboard = QPushButton("Save to note")
         self.button_clipboard.setFixedSize(130, 32)
         self.button_clipboard.setMouseTracking(True)
         self.button_clipboard.installEventFilter(self)
