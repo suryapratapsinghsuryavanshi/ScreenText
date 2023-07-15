@@ -11,6 +11,16 @@ As per the project idea, I'm start this project for an solution of screen text c
 python -m venv venv 
 ```
 4. Activate `venv` as par your OS.
+```sh
+# For Windows
+venv\Scripts\activate.bat
+
+# For Linux
+source venv/bin/activate
+
+# For Mac
+source venv/bin/activate
+```
 5. Install dependencys
 ```sh
 pip install -r ./requirements.txt
