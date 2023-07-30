@@ -69,15 +69,15 @@ class MainWindow(QMainWindow):
         # If we want the property to apply only to one specific Widget , we can give it a name
         # using setObjectName() and use an ID Selector to refer to it.
         widget_stylesheet = "QWidget#central_widget {" \
-                            "border-color: rgba(255, 0, 0, 255);" \
-                            "border-left-color: rgba(255, 0, 0, 255);" \
-                            "border-right-color: rgba(255, 0, 0, 255);" \
-                            "border-bottom-color: rgba(255, 0, 0, 255);" \
+                            "border-color: rgba(255, 219, 80, 1);" \
+                            "border-left-color: rgba(255, 219, 80, 1);" \
+                            "border-right-color: rgba(255, 219, 80, 1);" \
+                            "border-bottom-color: rgba(255, 219, 80, 1);" \
                             "border-style: dotted;" \
-                            "border-top-width: 4px;" \
-                            "border-left-width: 4px;" \
-                            "border-right-width: 4px;" \
-                            "border-bottom-width: 4px;" \
+                            "border-top-width: 2px;" \
+                            "border-left-width: 2px;" \
+                            "border-right-width: 2px;" \
+                            "border-bottom-width: 2px;" \
                             "border-radius: 4px;" \
                             "background-color: rgba(255, 255, 255, 2);" \
                             "}"

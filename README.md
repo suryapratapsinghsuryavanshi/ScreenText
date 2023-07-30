@@ -35,9 +35,9 @@ python ./main.py
 ## List of task to do
 | Task | Status |
 | -- | -- |
-| Provide a good GUI interface. | Progress |
-| Provide a OCR Support. | Pending |
-| Installable Binary. | Pending |
+| Provide a good GUI interface. | Complete |
+| Provide a OCR Support. | Complete |
+| Installable Binary. | Process |
 | Release | Pending |
 
 <hr>

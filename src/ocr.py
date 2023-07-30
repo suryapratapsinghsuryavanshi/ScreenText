@@ -8,3 +8,4 @@ def ocrs(image_path: str):
     img = Image.open(no_noise)
     ocr_result = pytesseract.image_to_string(img)
     pyperclip.copy(ocr_result)   
+    # print(ocr_result)
