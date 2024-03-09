@@ -46,9 +46,9 @@ jobs:
       working-directory: ./
     
     - name: Rename builded app
-      run: mv ./dist ./dist-${{ matrix.config.os }}
+      run: mv ./dist ./dist-${{ matrix.os }}
     
-    - name: Upload result job ${{ matrix.config.os }}
+    - name: Upload result job ${{ matrix.os }}
       uses: actions/upload-artifact@v3
       with:
         name: screentext-pyinstaller-artifact
@@ -80,8 +80,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.ScreenText_Token }}
       with:
-        tag_name: v1.0.19
-        release_name: Release v1.0.19
+        tag_name: v1.0.20
+        release_name: Release v1.0.20
         draft: false
         prerelease: false
         files: |
