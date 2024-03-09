@@ -2,7 +2,7 @@ import os
 from os import path
 
 from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog, \
-    QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QComboBox
+    QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QComboBox, QSystemTrayIcon
 from PyQt5.QtCore import Qt, QEvent, QObject, QCoreApplication, QTimer
 from PyQt5 import QtGui
 from PyQt5.QtGui import QIcon
@@ -101,7 +101,7 @@ class MainWindow(QMainWindow):
                          300)  # height
 
         # Set an icon for this window.
-        file_name = os.path.dirname(os.path.realpath(__file__)) + "\\Images\\capture.ico"
+        file_name = os.path.join(os.path.dirname(os.path.realpath(__file__)), "logo.png")
         if path.exists(file_name):
             self.setWindowIcon(QIcon(file_name))
 
