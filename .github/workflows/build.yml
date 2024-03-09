@@ -37,7 +37,7 @@ jobs:
 
     - name: Build executable
       run: |
-        pyinstaller ${{ env.MAIN_PY_FILE }}
+        python ${{ env.MAIN_PY_FILE }}
       working-directory: ./
 
     - name: List files in dist folder
@@ -49,8 +49,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.ScreenText_Token }}
       with:
-        tag_name: v1.0.8
-        release_name: Release v1.0.8
+        tag_name: v1.0.9
+        release_name: Release v1.0.9
         draft: false
         prerelease: false
 
