@@ -32,13 +32,16 @@ pip install -r ./requirements.txt
 python ./main.py
 ```
 
-## List of task to do
-| Task | Status |
-| -- | -- |
-| Provide a good GUI interface. | Complete |
-| Provide a OCR Support. | Complete |
-| Installable Binary. | Process |
-| Release | Pending |
+## Project Setup for User
+1. Go to [here](/releases)
+2. Choose and Download the latest version.
+3. Run the app.
+4. Enjoy the app.
+
+## Contribution
+- If you like the app, please give a star to the project.
+- If you have any issue, please create an issue [here](/issues)
+- If you want to contribute, please create a pull request [here](/pulls)
 
 <hr>
 🙏 Made with ❤️ by <a href="https://github.com/suryapratapsinghsuryavanshi/">Suryapratap Singh Suryavanshi</a>
