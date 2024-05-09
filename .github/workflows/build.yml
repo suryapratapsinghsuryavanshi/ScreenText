@@ -71,8 +71,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.ScreenText_Token }}
       with:
-        tag_name: v1.0.2
-        release_name: Release v1.0.2 Containing Windows, Linux and MacOS Executables with minor bug fixes
+        tag_name: v1.0.3
+        release_name: Release v1.0.3 Containing Windows, Linux and MacOS Executables with minor bug fixes
         draft: false
         prerelease: false
     
