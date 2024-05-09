@@ -11,7 +11,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: ['windows-latest', 'ubuntu-latest', 'macos-latest']
+        os: ['windows-latest', 'ubuntu-latest']
     
     env:
       MAIN_PY_FILE: 'ScreenText.py'  # Define the path to your main.py file here
@@ -71,8 +71,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.ScreenText_Token }}
       with:
-        tag_name: v1.0.3
-        release_name: Release v1.0.3 Containing Windows, Linux and MacOS Executables with minor bug fixes
+        tag_name: v1.0.4
+        release_name: Release v1.0.4 Containing Windows, Linux and MacOS Executables with minor bug fixes
         draft: false
         prerelease: false
     

@@ -1,7 +1,0 @@
-[project]
-name = "ScreenText"
-version = "1.0.2"
-description = "A tool for copying screen view text directly to clipboard."
-authors = [
-    { name = "Suryapratap Singh Suryavanshi", email = "suryprtaps@gmail.com" }
-]
