@@ -71,8 +71,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.ScreenText_Token }}
       with:
-        tag_name: v1.0.0
-        release_name: Release v1.0.0 Containing Windows, Linux and MacOS Executables
+        tag_name: v1.0.1
+        release_name: Release v1.0.1 Containing Windows, Linux and MacOS Executables with minor bug fixes
         draft: false
         prerelease: false
     
@@ -84,7 +84,7 @@ jobs:
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_path: ./dist*/dist-windows-latest/ScreenText.exe
-        asset_name: ScreenText-Windows
+        asset_name: ScreenText-Windows.exe
         asset_content_type: application/octet-stream
     
     - name: Upload Release Asset Linux
