@@ -88,7 +88,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.ScreenText_Token }}
       with:
         tag_name: v1.1.0
-        release_name: Release v1.0.0 Containing Final Windows, Linux and MacOS Executables
+        release_name: Release v1.0.0 Containing Final Windows, Linux Executables
         draft: false
         prerelease: false
     
@@ -114,13 +114,13 @@ jobs:
         asset_name: ScreenText-Linux
         asset_content_type: application/octet-stream
     
-    - name: Upload Release Asset MacOS
-      id: upload-release-asset-macos
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.ScreenText_Token }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./dist*/dist-macos-latest/ScreenText
-        asset_name: ScreenText-MacOS
-        asset_content_type: application/octet-stream
+    # - name: Upload Release Asset MacOS
+    #   id: upload-release-asset-macos
+    #   uses: actions/upload-release-asset@v1
+    #   env:
+    #     GITHUB_TOKEN: ${{ secrets.ScreenText_Token }}
+    #   with:
+    #     upload_url: ${{ steps.create_release.outputs.upload_url }}
+    #     asset_path: ./dist*/dist-macos-latest/ScreenText
+    #     asset_name: ScreenText-MacOS
+    #     asset_content_type: application/octet-stream
