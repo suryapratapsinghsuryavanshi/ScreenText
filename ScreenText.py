@@ -9,8 +9,8 @@ if os.name == 'nt':  # Windows
 elif os.name == 'posix':
     if os.uname().sysname == 'Darwin':  # macOS
         binaries = [
-            '/opt/homebrew/bin/tesseract;tesseract',
-            '/opt/homebrew/Cellar/tesseract/5.3.4_1/share/tessdata;tessdata'
+            '/opt/homebrew/bin/tesseract:tesseract',
+            '/opt/homebrew/Cellar/tesseract/5.3.4_1/share/tessdata:tessdata'
         ]
     else:  # Linux
         binaries = [
