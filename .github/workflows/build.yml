@@ -50,6 +50,7 @@ jobs:
       run: |
         echo "Tesseract Path:"
         which tesseract
+        find /opt/homebrew -name tessdata
         echo "macOS Tesseract Path:"
         ls -l /opt/homebrew/bin/tesseract
         echo "macOS Tessdata Path:"
