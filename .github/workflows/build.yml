@@ -46,25 +46,6 @@ jobs:
       run: |
         brew install tesseract
     
-    - name: Debug Paths
-      run: |
-        if [ "$RUNNER_OS" == "Linux" ]; then
-          echo "Linux Tesseract Path:"
-          ls -l /usr/bin/tesseract
-          echo "Linux Tessdata Path:"
-          ls -l /usr/share/tesseract-ocr/4.00/tessdata
-        elif [ "$RUNNER_OS" == "macOS" ]; then
-          echo "macOS Tesseract Path:"
-          ls -l /usr/local/bin/tesseract
-          echo "macOS Tessdata Path:"
-          ls -l /usr/local/share/tessdata
-        elif [ "$RUNNER_OS" == "Windows" ]; then
-          echo "Windows Tesseract Path:"
-          dir "C:\Program Files\Tesseract-OCR\tesseract.exe"
-          echo "Windows Tessdata Path:"
-          dir "C:\Program Files\Tesseract-OCR\tessdata"
-        fi
-    
     - name: Install pywin32 only for Windows
       if: matrix.os == 'windows-latest'
       run: |
