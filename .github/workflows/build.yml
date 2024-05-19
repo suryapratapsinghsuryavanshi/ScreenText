@@ -48,6 +48,8 @@ jobs:
     
     - name: Debug Paths
       run: |
+        echo "Tesseract Path:"
+        which tesseract
         echo "macOS Tesseract Path:"
         ls -l /usr/local/bin/tesseract
         echo "macOS Tessdata Path:"
