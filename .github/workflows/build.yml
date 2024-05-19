@@ -88,7 +88,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.ScreenText_Token }}
       with:
         tag_name: v1.1.0
-        release_name: Release v1.1.0 Containing Final Windows, Linux and MacOS Executables
+        release_name: Release v1.0.0 Containing Final Windows, Linux and MacOS Executables
         draft: false
         prerelease: false
     
