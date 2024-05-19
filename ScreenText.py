@@ -1,6 +1,8 @@
 import os
 import PyInstaller.__main__
 
+tessdata_directory = '/opt/homebrew/Cellar/tesseract/5.3.4_1/share/tessdata'
+
 if os.name == 'nt':  # Windows
     binaries = [
         'C:/Program Files/Tesseract-OCR/tesseract.exe;Tesseract-OCR',
@@ -12,6 +14,7 @@ elif os.name == 'posix':
             '/opt/homebrew/bin/tesseract:tesseract',
             '/opt/homebrew/Cellar/tesseract/5.3.4_1/share/tessdata:tessdata'
         ]
+        tessdata_directory = '/opt/homebrew/Cellar/tesseract/5.3.4_1/share/tessdata'
     else:  # Linux
         binaries = [
             '/usr/bin/tesseract:tesseract',
@@ -26,5 +29,6 @@ PyInstaller.__main__.run([
     '--onefile',
     '--windowed',
     '--add-binary', binaries[0],
+    '--exclude', f'{tessdata_directory}/configs' if os.name == 'posix' and os.uname().sysname == 'Darwin' else '',
     '--add-binary', binaries[1]
 ])
