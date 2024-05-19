@@ -29,6 +29,22 @@ jobs:
       run: |
         pip install -r requirements.txt
       working-directory: ./
+
+    - name: Install Tesseract OCR on Windows
+      if: runner.os == 'Windows'
+      run: |
+        choco install tesseract
+    
+    - name: Install Tesseract OCR on Ubuntu
+      if: runner.os == 'Linux'
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y tesseract-ocr
+
+    - name: Install Tesseract OCR on macOS
+      if: runner.os == 'macOS'
+      run: |
+        brew install tesseract
     
     - name: Install pywin32 only for Windows
       if: matrix.os == 'windows-latest'
