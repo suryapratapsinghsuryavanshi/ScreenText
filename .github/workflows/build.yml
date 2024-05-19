@@ -11,7 +11,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: ['windows-latest','ubuntu-latest','macos-latest']
+        os: ['macos-latest']
     
     env:
       MAIN_PY_FILE: 'ScreenText.py'  # Define the path to your main.py file here
@@ -45,6 +45,13 @@ jobs:
       if: runner.os == 'macOS'
       run: |
         brew install tesseract
+    
+    - name: Debug Paths
+      run: |
+        echo "macOS Tesseract Path:"
+        ls -l /usr/local/bin/tesseract
+        echo "macOS Tessdata Path:"
+        ls -l /usr/local/share/tessdata
     
     - name: Install pywin32 only for Windows
       if: matrix.os == 'windows-latest'
