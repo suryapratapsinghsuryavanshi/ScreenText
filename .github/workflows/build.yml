@@ -51,9 +51,9 @@ jobs:
         echo "Tesseract Path:"
         which tesseract
         echo "macOS Tesseract Path:"
-        ls -l /usr/local/bin/tesseract
+        ls -l /opt/homebrew/bin/tesseract
         echo "macOS Tessdata Path:"
-        ls -l /usr/local/share/tessdata
+        ls -l /opt/homebrew/share/tesseract-ocr/4.00/tessdata
     
     - name: Install pywin32 only for Windows
       if: matrix.os == 'windows-latest'
