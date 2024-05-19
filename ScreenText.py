@@ -9,13 +9,13 @@ if os.name == 'nt':  # Windows
 elif os.name == 'posix':
     if os.uname().sysname == 'Darwin':  # macOS
         binaries = [
-            '/usr/local/bin/tesseract;tesseract',
-            '/usr/local/share/tessdata;tessdata'
+            '/usr/local/bin/tesseract:tesseract',
+            '/usr/local/share/tessdata:tessdata'
         ]
     else:  # Linux
         binaries = [
-            '/usr/bin/tesseract;tesseract',
-            '/usr/share/tesseract-ocr/4.00/tessdata;tessdata'
+            '/usr/bin/tesseract:tesseract',
+            '/usr/share/tesseract-ocr/4.00/tessdata:tessdata'
         ]
 else:
     raise RuntimeError(f"Unsupported OS: {os.name}")
