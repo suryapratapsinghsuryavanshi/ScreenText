@@ -33,15 +33,15 @@ python ./main.py
 ```
 
 ## Project Setup for User
-1. Go to [here](/releases)
+1. Go to [here](/[releases](https://github.com/suryapratapsinghsuryavanshi/ScreenText/releases))
 2. Choose and Download the latest version.
 3. Run the app.
 4. Enjoy the app.
 
 ## Contribution
 - If you like the app, please give a star to the project.
-- If you have any issue, please create an issue [here](/issues)
-- If you want to contribute, please create a pull request [here](/pulls)
+- If you have any issue, please create an issue [here](https://github.com/suryapratapsinghsuryavanshi/ScreenText/issues)
+- If you want to contribute, please create a pull request [here](https://github.com/suryapratapsinghsuryavanshi/ScreenText/pulls)
 
 <hr>
 🙏 Made with ❤️ by <a href="https://github.com/suryapratapsinghsuryavanshi/">Suryapratap Singh Suryavanshi</a>
