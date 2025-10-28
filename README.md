@@ -33,7 +33,7 @@ python ./main.py
 ```
 
 ## Project Setup for User
-1. Go to [here](/[releases](https://github.com/suryapratapsinghsuryavanshi/ScreenText/releases))
+1. Go to [here](https://github.com/suryapratapsinghsuryavanshi/ScreenText/releases)
 2. Choose and Download the latest version.
 3. Run the app.
 4. Enjoy the app.
